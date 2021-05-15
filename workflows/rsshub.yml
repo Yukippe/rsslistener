@@ -13,7 +13,8 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
+            <b>叨叨发微博啦！</b>
             <b>${{ on.rsshub.outputs.title}}</b>
-            <a href="${{on.rsshub.outputs.link}}">${{on.rsshub.outputs.description}}</a>
+            <a href="${{on.rsshub.outputs.link}}">go go go !</a>
           format: html
           disable_web_page_preview: true
