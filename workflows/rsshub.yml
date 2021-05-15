@@ -1,0 +1,19 @@
+on:
+  rsshub:
+    path:
+      - path: /weibo/user/7599610444
+jobs:
+  ifttt:
+    name: Make a Request to telegram
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send a telegram message
+        uses: appleboy/telegram-action@v0.1.0
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            <b>${{ on.rsshub.outputs.title}}</b>
+            <a href="${{on.rsshub.outputs.link}}">${{on.rsshub.outputs.description}}</a>
+          format: html
+          disable_web_page_preview: true
