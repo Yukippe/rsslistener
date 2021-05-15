@@ -1,7 +1,7 @@
 on:
   rsshub:
     path:
-      - path: /weibo/user/7599610444
+      - path: /weibo/user/5040442250
 jobs:
   ifttt:
     name: Make a Request to telegram
